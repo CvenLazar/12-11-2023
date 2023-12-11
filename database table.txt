@@ -1,0 +1,87 @@
+create table voter(
+Vid int primary key auto_increment,
+Lname varchar(50),
+Fname varchar(50),
+Mi char,
+Birthday date,
+Course varchar(50),
+StudentNo int
+);
+
+insert into voter(lname, fname, mi, birthday, course, studentno)values
+('Lazar', 'Adrian', 'A', '2000-04-13', 'BSIT', 21138352);
+
+create table Candidates(
+Candid int primary key auto_increment,
+Lname varchar(50),
+Fname varchar(50),
+Mi char,
+Birthday date,
+Course varchar(50),
+Contact bigInt,
+StudentNo int,
+Platform varchar(150)
+);
+
+create table students(
+StudentNo int primary key auto_increment,
+CourseId int,
+DeptId int,
+Lname varchar(30),
+Fname varchar(30),
+Mname varchar(30),
+Birthday date,
+Contact bigInt,
+Email varchar(50)
+);
+
+alter table students auto_increment = 21138352;
+
+
+Header
+ <a class="navbar-brand" href=index.html style="color: white; font-weight: 600; margin-top: 15px;">HOME</a>
+    <a class="navbar-brand" href=dashboard.php style="color: white; font-weight: 600; margin-top: 15px;">ADMIN</a>
+
+
+DropDown
+    <tr>
+                        <td class="td-1">Select Department :</td>
+                        <td><select name="department"  required >             
+                          <option>CITCS</option>
+                          <option>CAS</option>
+                          <option>CCJ</option>
+                        </select></td>
+    </tr><br>
+
+create table Department(
+DeptId int primary key auto_increment,
+Dept_name varchar(50)
+);
+
+insert into department(dept_name) values 
+('CITCS'),
+('CAS'),
+('CCJ');
+
+department 
+depid
+dname
+
+create table Course(
+CourseId int primary key auto_increment,
+DeptId int,
+Course_Name varchar(50)
+);
+
+insert into course(deptid, course_name) values 
+(1,'BSIT'),
+(1,'BSCS'),
+(1,'ACT'),
+(2,'BAPolSci'),
+(2,'BAComm'),
+(2,'BSPsy'),
+(3,'BSCrim');
+course 
+courseid
+deptid
+coursename
